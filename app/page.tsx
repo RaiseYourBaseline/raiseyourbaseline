@@ -52,7 +52,7 @@ export default function HomePage() {
           href="#branches"
           className="inline-block mt-10 border border-home-stance/60 text-home-tag text-xs font-semibold tracking-[0.15em] uppercase px-6 py-3 rounded-full hover:bg-home-stance/10 transition-colors"
         >
-          Explore the Ecosystem
+          Discover
         </Link>
 
         <div id="branches" className="flex justify-center flex-wrap mt-11 gap-x-10 gap-y-6">
