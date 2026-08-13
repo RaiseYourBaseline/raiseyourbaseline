@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .gold-text {
+    background: linear-gradient(
+      112deg,
+      #6b5322 0%,
+      #f2dfa8 18%,
+      #c8a951 34%,
+      #5e4a1e 48%,
+      #f0dda6 64%,
+      #8a6e32 80%,
+      #d9c285 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
