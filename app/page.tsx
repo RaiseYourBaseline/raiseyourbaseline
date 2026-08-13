@@ -68,10 +68,13 @@ export default function HomePage() {
               The Academy
             </div>
           </Link>
-          <Link href="/reignite-the-spark" className="group">
+                    <Link href="/reignite-the-spark" className="group">
             <div className="text-xs text-home-eyebrow mb-2">III</div>
             <div className="text-[15px] text-home-tag group-hover:text-home-text transition-colors">
               Reignite the Spark
+            </div>
+            <div className="text-[11px] text-home-eyebrow mt-1">
+              RYB Women&rsquo;s Collection
             </div>
           </Link>
         </div>
