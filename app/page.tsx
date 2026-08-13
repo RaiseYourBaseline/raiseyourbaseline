@@ -31,10 +31,6 @@ export default function HomePage() {
         <p className="mt-8 gold-text font-sans font-bold text-[22px] tracking-[0.28em]">
           RAISE YOUR BASELINE
         </p>
-        <p className="font-serif italic text-base text-home-tag mt-1.5 mb-2">
-          A framework, not a fad
-        </p>
-
         <p className="mt-9 font-sans font-semibold text-[13px] tracking-[0.4em] uppercase text-home-eyebrow">
           Alignment
         </p>
