@@ -47,8 +47,6 @@ export default function HomePage() {
         <p className="text-sm font-semibold tracking-wide text-home-tag">KNOW YOUR BASELINE.</p>
         <p className="text-sm font-semibold tracking-wide text-home-tag">RAISE YOUR BASELINE.</p>
 
-        <p className="font-serif italic text-sm text-home-stance mt-5">Take a stance.</p>
-        <p className="font-serif italic text-sm text-home-stance">Move with intention.</p>
 
         <Link
           href="#branches"
