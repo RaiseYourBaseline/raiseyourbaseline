@@ -36,10 +36,10 @@ export default function HomePage() {
         </p>
 
         <p className="font-serif text-2xl sm:text-[32px] leading-snug text-home-text mt-6">
-        It is what it is.
+        Accepting that it is what it is.
         </p>
         <p className="font-serif text-2xl sm:text-[32px] leading-snug text-home-tag">
-          What you do about it is up to you.
+        What you do with it, is up to you.
         </p>
 
         <div className="w-10 h-px bg-home-divider mx-auto mt-11 mb-7" />
