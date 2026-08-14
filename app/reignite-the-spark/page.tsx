@@ -45,22 +45,14 @@ export default function ReigniteTheSparkPage() {
               A guided return, one lesson at a time — for women finding their way back to
               themselves.
             </p>
-                        <form action="https://formspree.io/f/mrpzlekv" method="POST" className="flex gap-2">
-              <input type="hidden" name="product" value="Heartbreak High" />
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Your email"
-                className="flex-1 min-w-0 bg-transparent border-b border-rts-rose text-rts-cardText text-xs placeholder:text-rts-cardBody/70 focus:outline-none py-0.5"
-              />
-              <button
-                type="submit"
-                className="text-xs text-rts-cardText border-b border-rts-rose pb-0.5 whitespace-nowrap"
-              >
-                Join waitlist
-              </button>
-            </form>
+                                   <a
+              href="https://5oj2s4.share-na3.hsforms.com/2NGIXKraTTY6ZIg_SpIWlMA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-rts-cardText border-b border-rts-rose pb-0.5 inline-block"
+            >
+              Join waitlist
+            </a>
           </div>
           <div className="bg-rts-card rounded-md px-6 py-[26px]">
             <div className="text-[10px] uppercase tracking-wide text-rts-rose mb-2">Companion</div>
@@ -68,22 +60,14 @@ export default function ReigniteTheSparkPage() {
             <p className="text-[12.5px] text-rts-cardBody leading-relaxed mb-4">
               The companion that brings the Raise Your Baseline philosophy into everyday life.
             </p>
-                        <form action="https://formspree.io/f/mrpzlekv" method="POST" className="flex gap-2">
-              <input type="hidden" name="product" value="The Guidebook" />
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Your email"
-                className="flex-1 min-w-0 bg-transparent border-b border-rts-rose text-rts-cardText text-xs placeholder:text-rts-cardBody/70 focus:outline-none py-0.5"
-              />
-              <button
-                type="submit"
-                className="text-xs text-rts-cardText border-b border-rts-rose pb-0.5 whitespace-nowrap"
-              >
-                Join waitlist
-              </button>
-            </form>
+                                   <a
+              href="https://5oj2s4.share-na3.hsforms.com/2NGIXKraTTY6ZIg_SpIWlMA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-rts-cardText border-b border-rts-rose pb-0.5 inline-block"
+            >
+              Join waitlist
+            </a>
           </div>
         </div>
 
