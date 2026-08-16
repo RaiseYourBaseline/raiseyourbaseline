@@ -79,12 +79,25 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="mt-11 pt-7 border-t border-home-rule">
+              <div className="mt-11 pt-7 border-t border-home-rule">
           <p className="text-[11px] tracking-widest uppercase text-home-muted mb-2.5">
             Raise Your Baseline is growing
           </p>
           <p className="font-serif italic text-base text-home-stance">
             Men&rsquo;s Collection &mdash; Coming Soon
+          </p>
+        </div>
+
+        <div className="mt-16 pt-10 border-t border-home-rule">
+          <p className="text-[11px] tracking-[0.3em] uppercase text-home-eyebrow mb-5">
+            We&rsquo;re Building
+          </p>
+          <p className="font-serif italic text-base text-home-body leading-relaxed max-w-sm mx-auto">
+            Raise Your Baseline is a living platform &mdash; growing, evolving, and taking shape
+            with intention.
+          </p>
+          <p className="text-xs text-home-muted mt-6">
+            Thank you for being here early.
           </p>
         </div>
       </div>
