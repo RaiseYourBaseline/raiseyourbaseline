@@ -12,7 +12,7 @@ const academyResources = [
     title: "Colour Mixing Experiment",
     description:
       "A hands-on activity exploring primary and secondary colours — predict each combination, mix and check, then colour in the results.",
-    pdf: "/resources/academy/colour-mixing-experiment.pdf",
+        pdf: "/resources/academy/Colour%20Mixing%20Experiment.pdf",
   },
 ];
 
