@@ -11,11 +11,16 @@ export const metadata: Metadata = {
 export default function AcademyPage() {
   return (
     <main className="min-h-screen bg-academy-bg text-academy-text font-sans">
-      <nav className="flex items-center justify-between px-6 sm:px-7 py-4 border-b border-academy-border">
+           <nav className="flex items-center justify-between px-6 sm:px-7 py-4 border-b border-academy-border">
         <Breadcrumb current="The Academy" accentClassName="text-academy-accent" />
-        <button className="bg-academy-sage text-white text-[13px] px-[18px] py-[9px] rounded-lg font-sans">
-          Join the waitlist
-        </button>
+        <div className="flex items-center gap-4">
+          <Link href="/academy/resources" className="text-[13px] text-academy-accent">
+            Resource Library
+          </Link>
+          <button className="bg-academy-sage text-white text-[13px] px-[18px] py-[9px] rounded-lg font-sans">
+            Join the waitlist
+          </button>
+        </div>
       </nav>
 
       <section className="px-6 sm:px-7 pt-12 pb-5 text-center">
