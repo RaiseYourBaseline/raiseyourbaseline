@@ -10,6 +10,7 @@ declare global {
         create: (options: {
           portalId: string;
           formId: string;
+          region?: string;
           target?: string;
           onFormSubmitted?: () => void;
         }) => void;
@@ -38,6 +39,7 @@ export default function ResourceLibrary({
   hubspot: {
     portalId: string;
     formId: string;
+    region: string;
   };
   theme: {
     text: string;
@@ -66,13 +68,19 @@ export default function ResourceLibrary({
     window.hbspt.forms.create({
       portalId: hubspot.portalId,
       formId: hubspot.formId,
+      region: hubspot.region,
       target: `#${formTargetId}`,
       onFormSubmitted: () => {
         window.localStorage.setItem(storageKey, "true");
         setUnlocked(true);
       },
     });
-  }, [unlocked, scriptLoaded, storageKey, hubspot.portalId, hubspot.formId, formTargetId]);
+  }, [unlocked, scriptLoaded, storageKey, hubspot.portalId, hubspot.formId, hubspot.region, formTargetId]);
+
+  function unlockManually() {
+    window.localStorage.setItem(storageKey, "true");
+    setUnlocked(true);
+  }
 
   if (!checked) {
     return null;
@@ -116,11 +124,18 @@ export default function ResourceLibrary({
           <div className={`max-w-sm w-full rounded-[10px] border bg-white p-6 text-center ${theme.cardBorder}`}>
             <p className={`text-sm mb-4 ${theme.text}`}>{pitchLine}</p>
             <Script
-              src="https://js.hsforms.net/forms/embed/v2.js"
+              src="https://js-na3.hsforms.net/forms/embed/v2.js"
               strategy="afterInteractive"
               onLoad={() => setScriptLoaded(true)}
             />
             <div id={formTargetId} />
+            <button
+              type="button"
+              onClick={unlockManually}
+              className={`mt-4 text-[11px] underline opacity-60 ${theme.body}`}
+            >
+              Already submitted? Unlock now
+            </button>
           </div>
         </div>
       )}
