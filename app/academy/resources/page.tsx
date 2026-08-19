@@ -37,10 +37,9 @@ export default function AcademyResourcesPage() {
           storageKey="academy_resources_unlocked"
           pitchLine="Enter your email to unlock the Academy resource library."
           resources={academyResources}
-                              hubspot={{
+                                       hubspot={{
             formId: "5460407c-9a48-4591-9c10-7dad60b557c1",
             portalId: "343531732",
-            region: "na3",
           }}
           theme={{
             text: "text-academy-text",
