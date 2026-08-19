@@ -42,13 +42,29 @@ export default function ResourceLibrary({
     setChecked(true);
   }, [storageKey]);
 
-  useEffect(() => {
+   useEffect(() => {
     function handleMessage(event: MessageEvent) {
-      const data = event.data;
+      let data = event.data;
+
+      if (typeof data === "string") {
+        try {
+          data = JSON.parse(data);
+        } catch {
+          return;
+        }
+      }
+
+      if (!data || typeof data !== "object") return;
+
+      // eslint-disable-next-line no-console
+      console.log("HubSpot form message received:", data);
+
+      const eventName = data.eventName || data.event;
+      const isHubspotCallback = data.type === "hsFormCallback" || eventName;
+
       if (
-        data &&
-        data.type === "hsFormCallback" &&
-        data.eventName === "onFormSubmitted"
+        isHubspotCallback &&
+        (eventName === "onFormSubmitted" || eventName === "onFormSubmit")
       ) {
         window.localStorage.setItem(storageKey, "true");
         setUnlocked(true);
