@@ -1,7 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
+
+declare global {
+  interface Window {
+    hbspt?: {
+      forms: {
+        create: (options: {
+          portalId: string;
+          formId: string;
+          target?: string;
+          onFormSubmitted?: () => void;
+        }) => void;
+      };
+    };
+  }
+}
 
 export type Resource = {
   title: string;
@@ -21,10 +36,8 @@ export default function ResourceLibrary({
   pitchLine: string;
   resources: Resource[];
   hubspot: {
-    scriptSrc: string;
-    region: string;
-    formId: string;
     portalId: string;
+    formId: string;
   };
   theme: {
     text: string;
@@ -35,6 +48,9 @@ export default function ResourceLibrary({
 }) {
   const [unlocked, setUnlocked] = useState(false);
   const [checked, setChecked] = useState(false);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+  const formCreatedRef = useRef(false);
+  const formTargetId = `hubspot-form-${storageKey}`;
 
   useEffect(() => {
     const stored = window.localStorage.getItem(storageKey);
@@ -42,37 +58,21 @@ export default function ResourceLibrary({
     setChecked(true);
   }, [storageKey]);
 
-   useEffect(() => {
-    function handleMessage(event: MessageEvent) {
-      let data = event.data;
+  useEffect(() => {
+    if (unlocked || !scriptLoaded || formCreatedRef.current) return;
+    if (!window.hbspt) return;
 
-      if (typeof data === "string") {
-        try {
-          data = JSON.parse(data);
-        } catch {
-          return;
-        }
-      }
-
-      if (!data || typeof data !== "object") return;
-
-      // eslint-disable-next-line no-console
-      console.log("HubSpot form message received:", data);
-
-      const eventName = data.eventName || data.event;
-      const isHubspotCallback = data.type === "hsFormCallback" || eventName;
-
-      if (
-        isHubspotCallback &&
-        (eventName === "onFormSubmitted" || eventName === "onFormSubmit")
-      ) {
+    formCreatedRef.current = true;
+    window.hbspt.forms.create({
+      portalId: hubspot.portalId,
+      formId: hubspot.formId,
+      target: `#${formTargetId}`,
+      onFormSubmitted: () => {
         window.localStorage.setItem(storageKey, "true");
         setUnlocked(true);
-      }
-    }
-    window.addEventListener("message", handleMessage);
-    return () => window.removeEventListener("message", handleMessage);
-  }, [storageKey]);
+      },
+    });
+  }, [unlocked, scriptLoaded, storageKey, hubspot.portalId, hubspot.formId, formTargetId]);
 
   if (!checked) {
     return null;
@@ -115,13 +115,12 @@ export default function ResourceLibrary({
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className={`max-w-sm w-full rounded-[10px] border bg-white p-6 text-center ${theme.cardBorder}`}>
             <p className={`text-sm mb-4 ${theme.text}`}>{pitchLine}</p>
-            <Script src={hubspot.scriptSrc} strategy="afterInteractive" />
-            <div
-              className="hs-form-frame"
-              data-region={hubspot.region}
-              data-form-id={hubspot.formId}
-              data-portal-id={hubspot.portalId}
+            <Script
+              src="https://js.hsforms.net/forms/embed/v2.js"
+              strategy="afterInteractive"
+              onLoad={() => setScriptLoaded(true)}
             />
+            <div id={formTargetId} />
           </div>
         </div>
       )}
