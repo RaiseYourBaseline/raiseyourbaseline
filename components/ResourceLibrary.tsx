@@ -1,23 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import Script from "next/script";
-
-declare global {
-  interface Window {
-    hbspt?: {
-      forms: {
-        create: (options: {
-          portalId: string;
-          formId: string;
-          region?: string;
-          target?: string;
-          onFormSubmitted?: () => void;
-        }) => void;
-      };
-    };
-  }
-}
+import { useEffect, useState, type FormEvent } from "react";
 
 export type Resource = {
   title: string;
@@ -39,7 +22,6 @@ export default function ResourceLibrary({
   hubspot: {
     portalId: string;
     formId: string;
-    region: string;
   };
   theme: {
     text: string;
@@ -50,9 +32,8 @@ export default function ResourceLibrary({
 }) {
   const [unlocked, setUnlocked] = useState(false);
   const [checked, setChecked] = useState(false);
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-  const formCreatedRef = useRef(false);
-  const formTargetId = `hubspot-form-${storageKey}`;
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
 
   useEffect(() => {
     const stored = window.localStorage.getItem(storageKey);
@@ -60,26 +41,30 @@ export default function ResourceLibrary({
     setChecked(true);
   }, [storageKey]);
 
-  useEffect(() => {
-    if (unlocked || !scriptLoaded || formCreatedRef.current) return;
-    if (!window.hbspt) return;
-
-    formCreatedRef.current = true;
-    window.hbspt.forms.create({
-      portalId: hubspot.portalId,
-      formId: hubspot.formId,
-      region: hubspot.region,
-      target: `#${formTargetId}`,
-      onFormSubmitted: () => {
-        window.localStorage.setItem(storageKey, "true");
-        setUnlocked(true);
-      },
-    });
-  }, [unlocked, scriptLoaded, storageKey, hubspot.portalId, hubspot.formId, hubspot.region, formTargetId]);
-
-  function unlockManually() {
-    window.localStorage.setItem(storageKey, "true");
-    setUnlocked(true);
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("submitting");
+    try {
+      const res = await fetch(
+        `https://api.hsforms.com/submissions/v3/integration/submit/${hubspot.portalId}/${hubspot.formId}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            fields: [{ name: "email", value: email }],
+            context: {
+              pageUri: window.location.href,
+              pageName: document.title,
+            },
+          }),
+        }
+      );
+      if (!res.ok) throw new Error("Submission failed");
+      window.localStorage.setItem(storageKey, "true");
+      setUnlocked(true);
+    } catch {
+      setStatus("error");
+    }
   }
 
   if (!checked) {
@@ -123,19 +108,26 @@ export default function ResourceLibrary({
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className={`max-w-sm w-full rounded-[10px] border bg-white p-6 text-center ${theme.cardBorder}`}>
             <p className={`text-sm mb-4 ${theme.text}`}>{pitchLine}</p>
-            <Script
-              src="https://js-na3.hsforms.net/forms/embed/v2.js"
-              strategy="afterInteractive"
-              onLoad={() => setScriptLoaded(true)}
-            />
-            <div id={formTargetId} />
-            <button
-              type="button"
-              onClick={unlockManually}
-              className={`mt-4 text-[11px] underline opacity-60 ${theme.body}`}
-            >
-              Already submitted? Unlock now
-            </button>
+            <form onSubmit={handleSubmit} className="flex gap-2">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email"
+                className={`flex-1 min-w-0 border rounded px-3 py-2 text-sm ${theme.cardBorder} ${theme.text}`}
+              />
+              <button
+                type="submit"
+                disabled={status === "submitting"}
+                className={`text-xs font-semibold uppercase tracking-wide px-4 py-2 rounded border whitespace-nowrap disabled:opacity-50 ${theme.accent} ${theme.cardBorder}`}
+              >
+                {status === "submitting" ? "..." : "Unlock"}
+              </button>
+            </form>
+            {status === "error" && (
+              <p className="text-xs text-red-600 mt-2">Something went wrong — try again.</p>
+            )}
           </div>
         </div>
       )}
