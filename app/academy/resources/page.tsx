@@ -18,7 +18,7 @@ const academyResources = [
     title: "The Better Buy",
     description:
       "A simple financial literacy activity that teaches children to compare prices, choices, and value before spending money. Using Tyson's real-life shopping example, children then choose something they need and compare two options to decide which is the better buy.",
-    pdf: "/resources/academy/The_Academy_Financial_Literacy.pdf",
+       pdf: "/resources/academy/The%20Academy%20Financial%20Literacy.pdf",
   },
 ];
 
