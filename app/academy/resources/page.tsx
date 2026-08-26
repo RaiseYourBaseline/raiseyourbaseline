@@ -12,7 +12,13 @@ const academyResources = [
     title: "Colour Mixing Experiment",
     description:
       "A hands-on activity exploring primary and secondary colours — predict each combination, mix and check, then colour in the results.",
-        pdf: "/resources/academy/Colour%20Mixing%20Experiment.pdf",
+    pdf: "/resources/academy/Colour%20Mixing%20Experiment.pdf",
+  },
+  {
+    title: "The Better Buy",
+    description:
+      "A simple financial literacy activity that teaches children to compare prices, choices, and value before spending money. Using Tyson's real-life shopping example, children then choose something they need and compare two options to decide which is the better buy.",
+    pdf: "/resources/academy/The_Academy_Financial_Literacy.pdf",
   },
 ];
 
