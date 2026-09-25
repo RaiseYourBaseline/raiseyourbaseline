@@ -50,7 +50,10 @@ export default function HomePage() {
           Discover the facets of RYB
         </Link>
 
-        <div id="facets" className="flex justify-center flex-wrap mt-11 gap-x-10 gap-y-6">
+        <div
+          id="facets"
+          className="relative left-1/2 -translate-x-1/2 w-[min(48rem,calc(100vw-2.5rem))] flex justify-center flex-wrap mt-11 gap-x-10 gap-y-6"
+        >
           {facets.map((facet) =>
             facet.href ? (
               <Link key={facet.name} href={facet.href} className="group">
