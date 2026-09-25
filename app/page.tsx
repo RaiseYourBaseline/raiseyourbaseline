@@ -1,4 +1,5 @@
 import Link from "next/link";
+import QuoteSlideshow from "@/components/QuoteSlideshow";
 
 export default function HomePage() {
   return (
@@ -31,16 +32,7 @@ export default function HomePage() {
         <p className="mt-8 gold-text font-sans font-bold text-[22px] tracking-[0.28em]">
           RAISE YOUR BASELINE
         </p>
-        <p className="mt-9 font-sans font-semibold text-[13px] tracking-[0.4em] uppercase text-home-eyebrow">
-          Alignment
-        </p>
-
-        <p className="font-serif text-2xl sm:text-[32px] leading-snug text-home-text mt-6">
-        Accepting that it is what it is.
-        </p>
-        <p className="font-serif text-2xl sm:text-[32px] leading-snug text-home-tag">
-        What you do with it, is up to you.
-        </p>
+        <QuoteSlideshow />
 
         <div className="w-10 h-px bg-home-divider mx-auto mt-11 mb-7" />
 
