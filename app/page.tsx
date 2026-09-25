@@ -1,6 +1,15 @@
 import Link from "next/link";
 import QuoteSlideshow from "@/components/QuoteSlideshow";
 
+// Facets without an href show as "Coming soon" until their pages exist.
+const facets: { numeral: string; name: string; href?: string }[] = [
+  { numeral: "I", name: "Nutrition" },
+  { numeral: "II", name: "Apothecary" },
+  { numeral: "III", name: "Movement" },
+  { numeral: "IV", name: "Clothing and Accessories" },
+  { numeral: "V", name: "Academy", href: "/academy" },
+];
+
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-home-bg text-home-text px-5 py-16 sm:py-24 text-center">
@@ -34,41 +43,30 @@ export default function HomePage() {
         </p>
         <QuoteSlideshow />
 
-        <div className="w-10 h-px bg-home-divider mx-auto mt-11 mb-7" />
-
-        <p className="text-sm font-semibold tracking-wide text-home-tag">KNOW YOUR BASELINE.</p>
-        <p className="text-sm font-semibold tracking-wide text-home-tag">RAISE YOUR BASELINE.</p>
-
-
         <Link
-          href="#branches"
+          href="#facets"
           className="inline-block mt-10 border border-home-stance/60 text-home-tag text-xs font-semibold tracking-[0.15em] uppercase px-6 py-3 rounded-full hover:bg-home-stance/10 transition-colors"
         >
-          Discover
+          Discover the facets of RYB
         </Link>
 
-        <div id="branches" className="flex justify-center flex-wrap mt-11 gap-x-10 gap-y-6">
-          <Link href="/institute" className="group">
-            <div className="text-xs text-home-eyebrow mb-2">I</div>
-            <div className="text-[15px] text-home-tag group-hover:text-home-text transition-colors">
-              The Institute
-            </div>
-          </Link>
-          <Link href="/academy" className="group">
-            <div className="text-xs text-home-eyebrow mb-2">II</div>
-            <div className="text-[15px] text-home-tag group-hover:text-home-text transition-colors">
-              The Academy
-            </div>
-          </Link>
-                    <Link href="/reignite-the-spark" className="group">
-            <div className="text-xs text-home-eyebrow mb-2">III</div>
-            <div className="text-[15px] text-home-tag group-hover:text-home-text transition-colors">
-              Reignite the Spark
-            </div>
-            <div className="text-[11px] text-home-eyebrow mt-1">
-              RYB Women&rsquo;s Collection
-            </div>
-          </Link>
+        <div id="facets" className="flex justify-center flex-wrap mt-11 gap-x-10 gap-y-6">
+          {facets.map((facet) =>
+            facet.href ? (
+              <Link key={facet.name} href={facet.href} className="group">
+                <div className="text-xs text-home-eyebrow mb-2">{facet.numeral}</div>
+                <div className="text-[15px] text-home-tag group-hover:text-home-text transition-colors">
+                  {facet.name}
+                </div>
+              </Link>
+            ) : (
+              <div key={facet.name}>
+                <div className="text-xs text-home-eyebrow mb-2">{facet.numeral}</div>
+                <div className="text-[15px] text-home-tag">{facet.name}</div>
+                <div className="text-[11px] text-home-eyebrow mt-1">Coming soon</div>
+              </div>
+            )
+          )}
         </div>
 
               <div className="mt-11 pt-7 border-t border-home-rule">

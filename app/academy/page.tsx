@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import { academyBranches } from "@/lib/academyBranches";
+import { instituteSections } from "@/lib/instituteSections";
 
 export const metadata: Metadata = {
   title: "The Academy",
   description:
-    "Aligned foundations. 10 branches. One child. The Academy builds the foundations for a whole human life through ten branches of learning.",
+    "Aligned foundations. 10 branches. One child. The Academy builds the foundations for a whole human life through ten branches of learning, grounded in the Institute for Whole Human Alignment.",
 };
 
 export default function AcademyPage() {
@@ -54,6 +55,39 @@ export default function AcademyPage() {
             <div className="text-[11.5px] text-academy-topics leading-relaxed">{branch.topics}</div>
           </div>
         ))}
+      </section>
+
+      <section id="institute" className="border-t border-academy-border px-6 sm:px-7 pt-12 pb-16">
+        <div className="mx-auto max-w-2xl">
+          <p className="text-xs tracking-[0.16em] uppercase text-academy-accent mb-4 text-center">
+            The Institute for Whole Human Alignment
+          </p>
+          <p className="font-serif text-2xl sm:text-[26px] italic leading-relaxed text-center mb-11">
+            What creates alignment in the whole human experience?
+          </p>
+
+          <div className="space-y-7">
+            {instituteSections.map((section) => (
+              <div key={section.numeral}>
+                <p className="text-[13px] text-academy-accent mb-1.5">{section.numeral}</p>
+                <p className="text-[15px] font-semibold text-academy-text mb-1">{section.heading}</p>
+                {section.lead && (
+                  <p className="text-sm italic text-academy-intro leading-relaxed mb-2.5">
+                    {section.lead}
+                  </p>
+                )}
+                {section.body.map((paragraph, i) => (
+                  <p key={i} className="text-sm text-academy-intro leading-relaxed mt-3 first:mt-0">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          <div className="w-full h-px bg-academy-border mt-9 mb-4" />
+          <p className="text-[13px] text-academy-accent">Educator or organization? Get in touch.</p>
+        </div>
       </section>
     </main>
   );
