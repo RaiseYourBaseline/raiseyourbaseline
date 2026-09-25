@@ -9,7 +9,7 @@ const QUOTES = [
     text: "A fool thinks he will live forever if he avoids fight; but old age gives him no peace, even if spears do.",
     author: "The Words of Odin",
   },
-  { text: "Placeholder quote three.", author: "" },
+  { text: "After victory, tighten your helmet cord.", author: "Hōjō Ujitsuna" },
   { text: "Placeholder quote four.", author: "" },
   { text: "Placeholder quote five.", author: "" },
 ];
