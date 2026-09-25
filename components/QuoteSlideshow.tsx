@@ -10,7 +10,7 @@ const QUOTES = [
     author: "The Words of Odin",
   },
   { text: "After victory, tighten your helmet cord.", author: "Hōjō Ujitsuna" },
-  { text: "Placeholder quote four.", author: "" },
+  { text: "If each of us held a candle, the disagreement would go out of our words.", author: "Rumi" },
   { text: "Placeholder quote five.", author: "" },
 ];
 
