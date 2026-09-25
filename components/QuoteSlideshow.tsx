@@ -16,6 +16,7 @@ const QUOTES = [
     text: "Only when the last tree has died, the last river been poisoned, and the last fish been caught will we realize we cannot eat money.",
     author: "Cree Wisdom",
   },
+  { text: "The bamboo that bends is stronger than the oak that resists.", author: "Japanese Proverb" },
 ];
 
 const SECONDS_PER_SLIDE = 6;
