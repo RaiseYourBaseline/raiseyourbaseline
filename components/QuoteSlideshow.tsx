@@ -11,7 +11,7 @@ const QUOTES = [
   },
   { text: "After victory, tighten your helmet cord.", author: "Hōjō Ujitsuna" },
   { text: "If each of us held a candle, the disagreement would go out of our words.", author: "Rumi" },
-  { text: "Placeholder quote five.", author: "" },
+  { text: "Truth is the daughter of time.", author: "Aulus Gellius" },
 ];
 
 const SECONDS_PER_SLIDE = 6;
