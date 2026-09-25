@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 /* Edit quotes here. Leave author as "" if you don't want one. */
 const QUOTES = [
-  { text: "It is what it is. What you do about it is up to you.", author: "" },
+  { text: "The invisible snake bites. Now I see.", author: "Taoist Proverb" },
   { text: "Placeholder quote two.", author: "" },
   { text: "Placeholder quote three.", author: "" },
   { text: "Placeholder quote four.", author: "" },
