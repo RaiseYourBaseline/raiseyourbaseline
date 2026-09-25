@@ -12,6 +12,10 @@ const QUOTES = [
   { text: "After victory, tighten your helmet cord.", author: "Hōjō Ujitsuna" },
   { text: "If each of us held a candle, the disagreement would go out of our words.", author: "Rumi" },
   { text: "Truth is the daughter of time.", author: "Aulus Gellius" },
+  {
+    text: "Only when the last tree has died, the last river been poisoned, and the last fish been caught will we realize we cannot eat money.",
+    author: "Cree Wisdom",
+  },
 ];
 
 const SECONDS_PER_SLIDE = 6;
