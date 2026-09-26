@@ -3,7 +3,7 @@ import QuoteSlideshow from "@/components/QuoteSlideshow";
 
 // Facets without an href show as "Coming soon" until their pages exist.
 const facets: { numeral: string; name: string; href?: string }[] = [
-  { numeral: "I", name: "Nutrition" },
+  { numeral: "I", name: "Nutrition", href: "/nutrition" },
   { numeral: "II", name: "Apothecary" },
   { numeral: "III", name: "Movement" },
   { numeral: "IV", name: "Clothing and Accessories" },
