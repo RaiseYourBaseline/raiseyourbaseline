@@ -41,6 +41,17 @@ const config: Config = {
           intro: "#6B5D4F",
           topics: "#8A7A63",
         },
+        // Nutrition — walnut / parchment / antique gold
+        nutrition: {
+          bg: "#F4EDE1",
+          dark: "#2B1B10",
+          text: "#2C1E14",
+          gold: "#A8854A",
+          body: "#5E4D3B",
+          rule: "#DCCDB4",
+          card: "#FBF7F0",
+          light: "#F5EDE0",
+        },
         // Reignite the Spark — blush / plum / gold
         rts: {
           bg: "#F5EDE0",
