@@ -64,6 +64,14 @@ const config: Config = {
           cardBody: "#C9B8C4",
           itemBorder: "#DFD0B8",
         },
+        // RYB ecosystem identity — black / graphite / white (temporary landing page, reused later)
+        ryb: {
+          black: "#050505",
+          graphite: "#151515",
+          graphiteLight: "#242424",
+          white: "#F3F2EE",
+          muted: "#8C8C88",
+        },
       },
     },
   },
