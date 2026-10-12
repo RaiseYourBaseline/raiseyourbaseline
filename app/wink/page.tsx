@@ -21,7 +21,7 @@ const threads = [
   },
   {
     numeral: "III",
-    heading: "XOXO",
+    heading: "Meet Me Outside",
     body: "The story currently being written. Ours to tell, when it's ready.",
   },
 ];
