@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Raise Your Baseline",
@@ -35,6 +36,13 @@ export default function HomePage() {
           It&rsquo;s all coming together.
         </p>
       </div>
+
+      <Link
+        href="/wink"
+        className="absolute bottom-6 right-6 z-10 text-[11px] tracking-[0.2em] text-ryb-muted/70 transition-colors hover:text-ryb-white sm:bottom-8 sm:right-8"
+      >
+        RYB &mdash; ;)
+      </Link>
     </main>
   );
 }
