@@ -8,23 +8,6 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const threads = [
-  {
-    numeral: "I",
-    heading: "The Lady of Discretion",
-    body: "Our narrator. She knows what's worth telling — and what isn't.",
-  },
-];
-
-const stories = [
-  {
-    number: "001",
-    title: "Meet Me Outside",
-    href: "/yoy/meet-me-outside",
-    status: "In development",
-  },
-];
-
 export default function YoyPage() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-ryb-black px-6 py-20 text-center">
@@ -51,30 +34,6 @@ export default function YoyPage() {
         <p className="mt-6 text-xs uppercase tracking-[0.3em] text-ryb-muted sm:text-sm">
           A world is taking shape, after hours.
         </p>
-
-        <div className="mt-14 space-y-8 text-left">
-          {threads.map((thread) => (
-            <div key={thread.numeral}>
-              <p className="text-[11px] tracking-[0.2em] text-ryb-muted">{thread.numeral}</p>
-              <p className="mt-1 font-serif text-lg text-ryb-white">{thread.heading}</p>
-              <p className="mt-1.5 text-sm leading-relaxed text-ryb-muted">{thread.body}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-14 text-left">
-          <p className="text-[11px] uppercase tracking-[0.3em] text-ryb-muted">Stories</p>
-          <div className="mt-3 h-px w-full bg-ryb-graphiteLight" />
-          {stories.map((story) => (
-            <Link key={story.number} href={story.href} className="group block border-b border-ryb-graphiteLight py-5">
-              <p className="text-[11px] tracking-[0.2em] text-ryb-muted">Story {story.number}</p>
-              <p className="mt-1 font-serif text-lg text-ryb-white transition-colors group-hover:text-ryb-muted">
-                {story.title}
-              </p>
-              <p className="mt-1.5 text-xs uppercase tracking-[0.2em] text-ryb-muted/70">{story.status}</p>
-            </Link>
-          ))}
-        </div>
 
         <Link
           href="/"
