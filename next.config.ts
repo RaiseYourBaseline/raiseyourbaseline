@@ -1,9 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // The Institute is now part of the Academy page.
   async redirects() {
-    return [{ source: "/institute", destination: "/academy#institute", permanent: true }];
+    return [
+      // The Institute is now part of the Academy page.
+      { source: "/institute", destination: "/academy#institute", permanent: true },
+      // RYB YOY used to live at /wink.
+      { source: "/wink/:path*", destination: "/yoy/:path*", permanent: true },
+    ];
   },
 };
 

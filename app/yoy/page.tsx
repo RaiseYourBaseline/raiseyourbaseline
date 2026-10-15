@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "RYB — ;)",
-  description: "A more secretive chapter of Raise Your Baseline.",
+  title: "RYB YOY",
+  description: "RYB YOY — the storytelling chapter of Raise Your Baseline.",
   robots: { index: false, follow: false },
 };
 
@@ -14,19 +14,18 @@ const threads = [
     heading: "The Lady of Discretion",
     body: "Our narrator. She knows what's worth telling — and what isn't.",
   },
+];
+
+const stories = [
   {
-    numeral: "II",
-    heading: "XOXO Experiences",
-    body: "The storytelling world taking shape inside RYB — ;), one chapter at a time.",
-  },
-  {
-    numeral: "III",
-    heading: "Meet Me Outside",
-    body: "The story currently being written. Ours to tell, when it's ready.",
+    number: "001",
+    title: "Meet Me Outside",
+    href: "/yoy/meet-me-outside",
+    status: "In development",
   },
 ];
 
-export default function WinkPage() {
+export default function YoyPage() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-ryb-black px-6 py-20 text-center">
       <Image
@@ -40,7 +39,7 @@ export default function WinkPage() {
 
       <div className="relative z-10 max-w-md">
         <h1 className="font-serif leading-[1.08] tracking-[0.02em] text-ryb-white text-[clamp(2.25rem,7vw,3.5rem)]">
-          RYB &mdash; ;)
+          RYB YOY
         </h1>
 
         <div className="mx-auto mt-8 mb-7 h-px w-10 bg-ryb-muted" />
@@ -60,6 +59,20 @@ export default function WinkPage() {
               <p className="mt-1 font-serif text-lg text-ryb-white">{thread.heading}</p>
               <p className="mt-1.5 text-sm leading-relaxed text-ryb-muted">{thread.body}</p>
             </div>
+          ))}
+        </div>
+
+        <div className="mt-14 text-left">
+          <p className="text-[11px] uppercase tracking-[0.3em] text-ryb-muted">Stories</p>
+          <div className="mt-3 h-px w-full bg-ryb-graphiteLight" />
+          {stories.map((story) => (
+            <Link key={story.number} href={story.href} className="group block border-b border-ryb-graphiteLight py-5">
+              <p className="text-[11px] tracking-[0.2em] text-ryb-muted">Story {story.number}</p>
+              <p className="mt-1 font-serif text-lg text-ryb-white transition-colors group-hover:text-ryb-muted">
+                {story.title}
+              </p>
+              <p className="mt-1.5 text-xs uppercase tracking-[0.2em] text-ryb-muted/70">{story.status}</p>
+            </Link>
           ))}
         </div>
 
