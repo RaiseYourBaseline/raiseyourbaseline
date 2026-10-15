@@ -41,7 +41,7 @@ export default function HomePage() {
         href="/wink"
         className="absolute bottom-6 right-6 z-10 text-[11px] tracking-[0.2em] text-ryb-muted/70 transition-colors hover:text-ryb-white sm:bottom-8 sm:right-8"
       >
-        RYB XOX
+        RYB YOY
       </Link>
     </main>
   );

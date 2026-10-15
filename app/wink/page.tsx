@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "RYB XOX",
-  description: "XOXO Experiences — the storytelling chapter of Raise Your Baseline.",
+  title: "RYB YOY",
+  description: "RYB YOY — the storytelling chapter of Raise Your Baseline.",
   robots: { index: false, follow: false },
 };
 
@@ -13,11 +13,6 @@ const threads = [
     numeral: "I",
     heading: "The Lady of Discretion",
     body: "Our narrator. She knows what's worth telling — and what isn't.",
-  },
-  {
-    numeral: "II",
-    heading: "XOXO Experiences",
-    body: "The storytelling world taking shape inside RYB — ;), one chapter at a time.",
   },
 ];
 
@@ -44,7 +39,7 @@ export default function WinkPage() {
 
       <div className="relative z-10 max-w-md">
         <h1 className="font-serif leading-[1.08] tracking-[0.02em] text-ryb-white text-[clamp(2.25rem,7vw,3.5rem)]">
-          RYB XOX
+          RYB YOY
         </h1>
 
         <div className="mx-auto mt-8 mb-7 h-px w-10 bg-ryb-muted" />

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Meet Me Outside",
-  description: "Story 001 from XOXO Experiences, RYB XOX.",
+  description: "Story 001 from RYB YOY.",
   robots: { index: false, follow: false },
 };
 
@@ -35,7 +35,7 @@ export default function MeetMeOutsidePage() {
       <article className="relative z-10 mx-auto max-w-md">
         <header className="text-center">
           <p className="text-[11px] uppercase tracking-[0.3em] text-ryb-muted">
-            RYB XOX &middot; Story 001
+            RYB YOY &middot; Story 001
           </p>
           <h1 className="mt-4 font-serif leading-[1.08] tracking-[0.02em] text-ryb-white text-[clamp(2.25rem,7vw,3.5rem)]">
             Meet Me Outside
@@ -55,7 +55,7 @@ export default function MeetMeOutsidePage() {
             href="/wink"
             className="text-[11px] tracking-[0.2em] text-ryb-muted/70 transition-colors hover:text-ryb-white"
           >
-            &larr; RYB XOX
+            &larr; RYB YOY
           </Link>
         </div>
       </article>
