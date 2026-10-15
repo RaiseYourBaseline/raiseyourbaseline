@@ -52,7 +52,7 @@ export default function MeetMeOutsidePage() {
 
         <div className="mt-16 text-center">
           <Link
-            href="/wink"
+            href="/yoy"
             className="text-[11px] tracking-[0.2em] text-ryb-muted/70 transition-colors hover:text-ryb-white"
           >
             &larr; RYB YOY

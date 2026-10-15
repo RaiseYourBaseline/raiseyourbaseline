@@ -20,12 +20,12 @@ const stories = [
   {
     number: "001",
     title: "Meet Me Outside",
-    href: "/wink/meet-me-outside",
+    href: "/yoy/meet-me-outside",
     status: "In development",
   },
 ];
 
-export default function WinkPage() {
+export default function YoyPage() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-ryb-black px-6 py-20 text-center">
       <Image
