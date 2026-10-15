@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+const parts = [
+  { number: 1, title: "Re-Awakening", href: "/yoy/re-awakening" },
+  { number: 2, title: "I Should Get His Number", href: "/yoy/i-should-get-his-number" },
+  { number: 3, title: "Meet Me Outside", href: "/yoy/meet-me-outside" },
+];
+
 export default function YoyPage() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-ryb-black px-6 py-20 text-center">
@@ -34,6 +40,23 @@ export default function YoyPage() {
         <p className="mt-6 text-xs uppercase tracking-[0.3em] text-ryb-muted sm:text-sm">
           A world is taking shape, after hours.
         </p>
+
+        <nav className="mt-14 text-left">
+          <p className="text-[11px] uppercase tracking-[0.3em] text-ryb-muted">Contents</p>
+          <div className="mt-3 h-px w-full bg-ryb-graphiteLight" />
+          {parts.map((part) => (
+            <Link
+              key={part.number}
+              href={part.href}
+              className="group flex items-baseline gap-5 border-b border-ryb-graphiteLight py-5"
+            >
+              <span className="w-12 shrink-0 text-[11px] tracking-[0.2em] text-ryb-muted">Part {part.number}</span>
+              <span className="font-serif text-lg text-ryb-white transition-colors group-hover:text-ryb-muted">
+                {part.title}
+              </span>
+            </Link>
+          ))}
+        </nav>
 
         <Link
           href="/"
