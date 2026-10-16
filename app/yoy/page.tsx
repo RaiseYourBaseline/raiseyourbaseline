@@ -58,6 +58,15 @@ export default function YoyPage() {
           ))}
         </nav>
 
+        <div className="mt-10">
+          <Link
+            href="/yoy/shop"
+            className="inline-block border border-ryb-muted px-6 py-3 text-[11px] uppercase tracking-[0.3em] text-ryb-white transition-colors hover:bg-ryb-white hover:text-ryb-black"
+          >
+            Shop the looks
+          </Link>
+        </div>
+
         <Link
           href="/"
           className="mt-14 inline-block text-[11px] tracking-[0.2em] text-ryb-muted/70 transition-colors hover:text-ryb-white"

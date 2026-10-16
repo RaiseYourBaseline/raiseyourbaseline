@@ -9,9 +9,10 @@ type StoryPartProps = {
   passages: string[];
   previous?: PartLink;
   next?: PartLink;
+  lookHref?: string;
 };
 
-export default function StoryPart({ part, title, passages, previous, next }: StoryPartProps) {
+export default function StoryPart({ part, title, passages, previous, next, lookHref }: StoryPartProps) {
   return (
     <main className="relative min-h-screen overflow-hidden bg-ryb-black px-6 py-20">
       <Image
@@ -37,6 +38,17 @@ export default function StoryPart({ part, title, passages, previous, next }: Sto
             <p key={passage}>{passage}</p>
           ))}
         </div>
+
+        {lookHref && (
+          <div className="mt-14 text-center">
+            <Link
+              href={lookHref}
+              className="inline-block border border-ryb-muted px-6 py-3 text-[11px] uppercase tracking-[0.3em] text-ryb-white transition-colors hover:bg-ryb-white hover:text-ryb-black"
+            >
+              Shop this look
+            </Link>
+          </div>
+        )}
 
         {(previous || next) && (
           <nav className="mt-16 flex justify-between gap-6 border-t border-ryb-graphiteLight pt-6">

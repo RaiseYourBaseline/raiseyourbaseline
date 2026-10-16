@@ -22,6 +22,7 @@ export default function MeetMeOutsidePage() {
       title="Meet Me Outside"
       passages={passages}
       previous={{ label: "I Should Get His Number", href: "/yoy/i-should-get-his-number" }}
+      lookHref="/yoy/shop#meet-me-outside"
     />
   );
 }
