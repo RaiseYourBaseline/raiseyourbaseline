@@ -13,6 +13,7 @@ const passages = [
   "But I had written about this one. Large, thick, with just the right amount of cum. Mmmm.",
   "It had gotten me in a lot of trouble at the end of my marriage. But I had written about it. I had seen it.",
   "And now it’s right here on my phone.",
+  "DELETE. Shit, should have disobeyed and kept a copy.",
   "Wet. Instantly.",
   "You could see my nipples get hard under my white tank.",
   "I don’t know if you’ve had your pussy pulse at the mere image of a penis, but f***. It happened.",
