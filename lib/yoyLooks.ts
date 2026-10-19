@@ -23,7 +23,7 @@ export const yoyLooks: Look[] = [
     storyHref: "/yoy/re-awakening",
     line: "Just one picture.",
     pieces: [
-      { name: "The white tank", detail: "Thin enough to show everything." },
+      { name: "The white tank", detail: "Heavyweight 100% cotton." },
       { name: "The pink panties", detail: "Soft and simple." },
       { name: "The hoodie", detail: "Oversized, for a night in." },
       { name: "The slippers", detail: "Kicked off by the bed." },
