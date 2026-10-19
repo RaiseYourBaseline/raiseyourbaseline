@@ -17,6 +17,19 @@ export type Look = {
 
 export const yoyLooks: Look[] = [
   {
+    slug: "re-awakening",
+    part: 1,
+    story: "Re-Awakening",
+    storyHref: "/yoy/re-awakening",
+    line: "Just one picture.",
+    pieces: [
+      { name: "The white tank", detail: "Thin enough to show everything." },
+      { name: "The pink panties", detail: "Soft and simple." },
+      { name: "The hoodie", detail: "Oversized, for a night in." },
+      { name: "The slippers", detail: "Kicked off by the bed." },
+    ],
+  },
+  {
     slug: "meet-me-outside",
     part: 3,
     story: "Meet Me Outside",
