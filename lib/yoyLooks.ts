@@ -26,6 +26,7 @@ export const yoyLooks: Look[] = [
       { name: "The white tank", detail: "Heavyweight 100% cotton." },
       { name: "The pink panties", detail: "Soft and simple." },
       { name: "The hoodie", detail: "Oversized, for a night in." },
+      { name: "The lounge pants", detail: "Matching white cotton, tossed aside." },
       { name: "The slippers", detail: "Kicked off by the bed." },
     ],
   },
