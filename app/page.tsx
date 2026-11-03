@@ -35,6 +35,13 @@ export default function HomePage() {
         <p className="mt-6 text-xs uppercase tracking-[0.3em] text-ryb-muted sm:text-sm">
           It&rsquo;s all coming together.
         </p>
+
+        <Link
+          href="/reminders"
+          className="mt-12 inline-block rounded-full border border-[#C8A951] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#C8A951] transition-colors hover:bg-[#C8A951] hover:text-ryb-black"
+        >
+          Reminders With Love
+        </Link>
       </div>
 
       <Link
