@@ -59,6 +59,13 @@ export default function YoyPage() {
         </nav>
 
         <Link
+          href="/reminders"
+          className="mt-10 block rounded-full border border-[#C8A951] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#C8A951] transition-colors hover:bg-[#C8A951] hover:text-ryb-black"
+        >
+          Reminders With Love
+        </Link>
+
+        <Link
           href="/"
           className="mt-14 inline-block text-[11px] tracking-[0.2em] text-ryb-muted/70 transition-colors hover:text-ryb-white"
         >
