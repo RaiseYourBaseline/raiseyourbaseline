@@ -72,6 +72,15 @@ const config: Config = {
           white: "#F3F2EE",
           muted: "#8C8C88",
         },
+        // Little Black Rope waitlist — black / soft blush / silver (sits inside the YOY world)
+        lbr: {
+          black: "#050505",
+          line: "#2A2A2C",
+          blush: "#EBC6C6",
+          blushDeep: "#C9999E",
+          silver: "#C7CACF",
+          silverMuted: "#8F9297",
+        },
       },
     },
   },
