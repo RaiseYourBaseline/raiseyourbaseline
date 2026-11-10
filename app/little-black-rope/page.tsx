@@ -23,20 +23,18 @@ export const viewport: Viewport = {
 };
 
 // HubSpot form that stores the waitlist signups.
-// TODO: set formId once the "Little Black Rope waitlist" form exists in HubSpot.
 const hubspot: WaitlistHubspot = {
   portalId: "343531732",
-  formId: "REPLACE_WITH_HUBSPOT_FORM_ID",
+  formId: "ce88ea0f-2b42-40c6-9d23-68d2bf5bb940",
   ageProperty: "yoy_age_18_plus",
   consentProperty: "yoy_email_consent",
 };
 
 // CASL: the consent request must say who is asking, with a mailing address
 // and one other way to reach you.
-// TODO: replace with the business mailing address (a PO box is fine).
 const sender = {
   name: "YOY by Raise Your Baseline",
-  mailingAddress: "MAILING ADDRESS",
+  mailingAddress: "330 Rathburn Road West, Mississauga, ON L5B 3Y1",
   contact: "raiseyourbaseline.ca",
 };
 
