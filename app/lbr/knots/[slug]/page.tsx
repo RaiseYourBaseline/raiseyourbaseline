@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { freeKnots } from "@/lib/lbrLibrary";
+import LbrKnotPlayer from "@/components/LbrKnotPlayer";
 
 export function generateStaticParams() {
   return freeKnots.map((knot) => ({ slug: knot.slug }));
@@ -38,6 +39,8 @@ export default async function KnotPage({ params }: { params: Promise<{ slug: str
       </h1>
 
       <p className="mt-5 text-[15px] leading-relaxed text-lbr-silver">{knot.summary}</p>
+
+      <LbrKnotPlayer videoUrl={knot.videoUrl} musicUrl={knot.musicUrl} />
 
       <ol className="mt-10 space-y-5 border-t border-lbr-line pt-8">
         {knot.steps.map((step, i) => (

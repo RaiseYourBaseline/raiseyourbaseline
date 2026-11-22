@@ -3,6 +3,10 @@ export type Knot = {
   title: string;
   summary: string;
   steps: string[];
+  // Set once the tutorial video (and its background music track, if any) is ready —
+  // drop the files in /public/videos and /public/audio and point these at them.
+  videoUrl?: string;
+  musicUrl?: string;
 };
 
 // The two starter knots — free and public. Add more here as tutorials are ready;
