@@ -72,14 +72,15 @@ const config: Config = {
           white: "#F3F2EE",
           muted: "#8C8C88",
         },
-        // Little Black Rope waitlist — black / soft blush / silver (sits inside the YOY world)
+        // The Little Black Rope (thelittleblackrope.ca) — black / chocolate / copper.
+        // Same token names as before so WaitlistForm only needed a copy change, not a restyle.
         lbr: {
-          black: "#050505",
-          line: "#2A2A2C",
-          blush: "#EBC6C6",
-          blushDeep: "#C9999E",
-          silver: "#C7CACF",
-          silverMuted: "#8F9297",
+          black: "#0A0604",
+          line: "#2B1A12",
+          blush: "#B8733A", // primary accent (copper) — buttons, success text, focus ring
+          blushDeep: "#8B5A2B", // secondary accent — deeper copper/rust
+          silver: "#D9C7B8", // body text on dark — warm chocolate-adjacent neutral
+          silverMuted: "#9C8977", // muted/secondary text
         },
       },
     },

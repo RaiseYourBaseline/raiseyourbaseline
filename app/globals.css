@@ -18,4 +18,34 @@
     background-clip: text;
     color: transparent;
   }
+
+  /* The Little Black Rope — polished copper, same gradient-sheen technique as .gold-text. */
+  .copper-text {
+    background: linear-gradient(
+      112deg,
+      #5c3317 0%,
+      #e8a56c 18%,
+      #b8733a 34%,
+      #5c3317 48%,
+      #f0b183 64%,
+      #8b4a24 80%,
+      #d98a4b 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .copper-shine {
+    background: linear-gradient(
+      112deg,
+      #8b4a24 0%,
+      #e8a56c 18%,
+      #b8733a 34%,
+      #6b3a1c 48%,
+      #f0b183 64%,
+      #8b4a24 80%,
+      #d98a4b 100%
+    );
+  }
 }

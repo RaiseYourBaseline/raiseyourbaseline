@@ -29,7 +29,7 @@ export default function RemindersPage() {
       />
 
       <div className="relative z-10 max-w-md">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-ryb-muted">RYB YOY</p>
+        <p className="text-[11px] uppercase tracking-[0.3em] text-ryb-muted">Raise Your Baseline</p>
 
         <h1 className="mt-4 font-serif leading-[1.08] tracking-[0.02em] text-ryb-white text-[clamp(2.25rem,7vw,3.5rem)]">
           Reminders With Love
@@ -59,10 +59,10 @@ export default function RemindersPage() {
         <p className="mt-4 text-xs text-ryb-muted">Pick your guy, set your times, and he&rsquo;ll text you. Reply STOP anytime.</p>
 
         <Link
-          href="/yoy"
+          href="/"
           className="mt-14 inline-block text-[11px] tracking-[0.2em] text-ryb-muted/70 transition-colors hover:text-ryb-white"
         >
-          &larr; RYB YOY
+          &larr; Raise Your Baseline
         </Link>
       </div>
     </main>
