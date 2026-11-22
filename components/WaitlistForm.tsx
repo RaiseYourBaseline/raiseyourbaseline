@@ -15,7 +15,7 @@ export type WaitlistHubspot = {
 
 export const AGE_TEXT = "I'm 18 or older.";
 export const CONSENT_TEXT =
-  "Yes, YOY can email me about the launch and future offers. I can unsubscribe anytime.";
+  "Yes, The Little Black Rope can email me about the launch and future offers. I can unsubscribe anytime.";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 // A person can't read the page and fill the form faster than this.
@@ -227,7 +227,7 @@ export default function WaitlistForm({
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-full bg-lbr-blush px-6 py-4 text-xs font-semibold uppercase tracking-[0.28em] text-lbr-black transition-colors hover:bg-ryb-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lbr-silver disabled:opacity-60"
+        className="copper-shine w-full rounded-full px-6 py-4 text-xs font-semibold uppercase tracking-[0.28em] text-lbr-black transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lbr-silver disabled:opacity-60"
       >
         {status === "submitting" ? "One moment…" : buttonLabel}
       </button>
