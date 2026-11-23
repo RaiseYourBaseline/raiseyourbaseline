@@ -3,6 +3,10 @@ export type Knot = {
   title: string;
   summary: string;
   steps: string[];
+  // Set once the tutorial video (and its background music track, if any) is ready —
+  // drop the files in /public/videos and /public/audio and point these at them.
+  videoUrl?: string;
+  musicUrl?: string;
 };
 
 // The two starter knots — free and public. Add more here as tutorials are ready;
@@ -27,6 +31,7 @@ export const freeKnots: Knot[] = [
       "Placeholder step 2 — swap in the real instructions when ready.",
       "Placeholder step 3 — swap in the real instructions when ready.",
     ],
+    videoUrl: "/videos/celtic-heart-knot.mp4",
   },
 ];
 
