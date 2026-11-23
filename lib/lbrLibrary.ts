@@ -21,6 +21,7 @@ export const freeKnots: Knot[] = [
       "Placeholder step 2 — swap in the real instructions when ready.",
       "Placeholder step 3 — swap in the real instructions when ready.",
     ],
+    videoUrl: "/videos/chinese-good-luck-knot.mp4",
   },
   {
     slug: "celtic-heart-knot",
