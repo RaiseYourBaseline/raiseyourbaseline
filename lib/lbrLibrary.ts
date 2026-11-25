@@ -34,6 +34,17 @@ export const freeKnots: Knot[] = [
     ],
     videoUrl: "/videos/celtic-heart-knot.mp4",
   },
+  {
+    slug: "sliding-barrel-knot",
+    title: "Sliding Barrel Knot",
+    summary: "An adjustable knot that lets the rope move and fit with you.",
+    steps: [
+      "Placeholder step 1 — swap in the real instructions when ready.",
+      "Placeholder step 2 — swap in the real instructions when ready.",
+      "Placeholder step 3 — swap in the real instructions when ready.",
+    ],
+    videoUrl: "/videos/sliding-barrel-knot.mp4",
+  },
 ];
 
 // Categories that unlock with the QR code on the product. No individual pages
