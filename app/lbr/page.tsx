@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { freeKnots, lockedCategories } from "@/lib/lbrLibrary";
+import { freeKnots, freeSomatic, lockedCategories } from "@/lib/lbrLibrary";
 import LbrLibraryGrid from "@/components/LbrLibraryGrid";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function LbrLibraryHome() {
         somatic content, and notes &mdash; unlocks with the QR code on your rope.
       </p>
 
-      <LbrLibraryGrid freeKnots={freeKnots} lockedCategories={lockedCategories} />
+      <LbrLibraryGrid freeKnots={freeKnots} freeSomatic={freeSomatic} lockedCategories={lockedCategories} />
 
       <p className="mx-auto mt-16 max-w-sm text-xs leading-relaxed text-lbr-silverMuted">
         Part of every rope supports women&rsquo;s shelters. Details at launch.

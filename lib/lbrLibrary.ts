@@ -47,6 +47,23 @@ export const freeKnots: Knot[] = [
   },
 ];
 
+// Free, public somatic practices — a taste of the locked "Somatic Content" category,
+// made public on purpose since this one's easy to find elsewhere anyway. Each gets
+// its own page at /somatic/[slug].
+export const freeSomatic: Knot[] = [
+  {
+    slug: "back-posture-reminder",
+    title: "Back Posture Reminder",
+    summary: "A simple reset to bring your spine back online.",
+    steps: [
+      "Placeholder step 1 — swap in the real instructions when ready.",
+      "Placeholder step 2 — swap in the real instructions when ready.",
+      "Placeholder step 3 — swap in the real instructions when ready.",
+    ],
+    videoUrl: "/videos/back-posture-reminder.mp4",
+  },
+];
+
 // Categories that unlock with the QR code on the product. No individual pages
 // yet — just the locked/unlocked state on the library home until there's real
 // content to give each one its own page.

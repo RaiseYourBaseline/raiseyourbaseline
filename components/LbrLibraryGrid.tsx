@@ -8,9 +8,11 @@ const UNLOCK_KEY = "lbr_library_unlocked";
 
 export default function LbrLibraryGrid({
   freeKnots,
+  freeSomatic,
   lockedCategories,
 }: {
   freeKnots: Knot[];
+  freeSomatic: Knot[];
   lockedCategories: { title: string; description: string }[];
 }) {
   const [unlocked, setUnlocked] = useState(false);
@@ -32,6 +34,20 @@ export default function LbrLibraryGrid({
             {knot.title}
           </p>
           <p className="mt-1.5 text-sm leading-relaxed text-lbr-silverMuted">{knot.summary}</p>
+        </Link>
+      ))}
+
+      {freeSomatic.map((practice) => (
+        <Link
+          key={practice.slug}
+          href={`/somatic/${practice.slug}`}
+          className="group rounded-[10px] border border-lbr-line bg-white/[0.02] p-5 transition-colors hover:border-lbr-blush"
+        >
+          <p className="text-[10px] uppercase tracking-[0.2em] text-lbr-blush">Free &middot; Somatic</p>
+          <p className="mt-2 font-serif text-lg text-ryb-white transition-colors group-hover:text-lbr-blush">
+            {practice.title}
+          </p>
+          <p className="mt-1.5 text-sm leading-relaxed text-lbr-silverMuted">{practice.summary}</p>
         </Link>
       ))}
 
